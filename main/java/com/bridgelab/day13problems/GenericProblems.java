@@ -2,43 +2,8 @@ package com.bridgelab.day13problems;
 
 public class GenericProblems {
 
-	public static Integer findIntMax(Integer one, Integer two, Integer three) {
-
-		if (one.compareTo(two) > 0) {
-			if (one.compareTo(three) > 0) {
-				return one;
-			} else {
-				return three;
-			}
-		} else if (two.compareTo(one) > 0) {
-			if (two.compareTo(three) > 0) {
-				return two;
-			} else {
-				return three;
-			}
-		} else
-			return three;
-	}
-
-	public static Float findFloatMax(Float one, Float two, Float three) {
-		if (one.compareTo(two) > 0) {
-			if (one.compareTo(three) > 0) {
-				return one;
-			} else {
-				return three;
-			}
-		} else if (two.compareTo(one) > 0) {
-			if (two.compareTo(three) > 0) {
-				return two;
-			} else {
-				return three;
-			}
-		} else
-			return three;
-	}
-
-	public static String findStringMax(String one, String two, String three) {
-		String max = one;
+	public static <t extends Comparable<t>> t findMax(t one, t two, t three) {
+		t max = one;
 		if (two.compareTo(max) > 0)
 			max = two;
 		if (three.compareTo(max) > 0)

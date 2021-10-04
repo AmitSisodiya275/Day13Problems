@@ -36,4 +36,13 @@ public class GenericProblems {
 		} else
 			return three;
 	}
+
+	public static String findStringMax(String one, String two, String three) {
+		String max = one;
+		if (two.compareTo(max) > 0)
+			max = two;
+		if (three.compareTo(max) > 0)
+			max = three;
+		return max;
+	}
 }

@@ -41,4 +41,22 @@ public class GenericProblemsTest {
 		float result = GenericProblems.findFloatMax(20.20f, 15.15f, 50.50f);
 		assertEquals(50.50, result, 50.50f);
 	}
+
+	@Test
+	public void testFindStringMaxTC1() {
+		String result = GenericProblems.findStringMax("Pear", "Apple", "Banana");
+		assertEquals("Pear", result);
+	}
+
+	@Test
+	public void testFindStringMaxTC2() {
+		String result = GenericProblems.findStringMax("Apple", "Pear", "Banana");
+		assertEquals("Pear", result);
+	}
+
+	@Test
+	public void testFindStringMaxTC3() {
+		String result = GenericProblems.findStringMax("Apple", "Banana", "Pear");
+		assertEquals("Pear", result);
+	}
 }

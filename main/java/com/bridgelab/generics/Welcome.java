@@ -1,4 +1,4 @@
-package com.bridgelab.day13problems;
+package com.bridgelab.generics;
 
 public class Welcome {
 
